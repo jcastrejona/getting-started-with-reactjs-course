@@ -10,9 +10,6 @@
 
 <body>
   <div id="app"></div>
-  <div>
-    <h1>HELLO WORLD</h1>
-  </div>
 
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -20,7 +17,16 @@
   <script type="text/babel">
     const Header = <h1>HELLO WORLD FROM REACT</h1>;
     /// React.createElement('h1', null, 'HELLO WORLD FROM REACT');
+
+    const Clock = function () {
+      const date = new Date();
+      const currYear =  date.getFullYear();
+      return <h2>El año actual es: {currYear}</h2>
+    }
+
     ReactDOM.render(Header, document.getElementById('app'));
+    ReactDOM.render(<Clock />, document.getElementById('app'));
+
   </script>
 </body>
 
